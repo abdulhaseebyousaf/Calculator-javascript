@@ -12,7 +12,7 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 </style>
-<body class=" bg-gradient-to-b max-[450px]:overflow-x-scroll overflow-y-hidden from-[#031020] to-[#2c3a57]
+<body class=" bg-gradient-to-b  from-[#031020] to-[#2c3a57]
 h-screen flex items-center flex-col justify-center font-[Rubik] ">
 <!--  -->
 <h1 class="text-4xl  tracking-wide bg-gradient-to-r from-[#fefefe] via-[#ea3c43] to-[#07b8c7] inline-block text-transparent bg-clip-text mb-9 font-semibold max-sm:mb-7 " >Employee Table</h1>
@@ -75,10 +75,12 @@ h-screen flex items-center flex-col justify-center font-[Rubik] ">
 </div>
   </div>
   </div>
-  <!--  -->
-    <table class="table max-lg:w-11/12 h-max w-9/12 table-auto cursor-pointer rounded-2xl bg-inherit opacity-80 bg-slate-500 max-sm:w-full max-sm:translate-x-16 pl-9 max-sm:flex-nowrap">
+  <!--main div-->
+  <div class="max-[495px]:w-[96%] max-[495px]:overflow-x-scroll w-full h-max   ">
+<!-- tabel -->
+  <table class="rounded-2xl table table-auto cursor-pointer w-9/12 m-auto max-lg:w-11/12  bg-inherit opacity-80 bg-slate-500 pl-9 ">
+    <!-- first row  -->
         <thead>
-            <!-- first row  -->
           <tr>
             <th id="ecode" class=" bg-[#fefefe]  text-black px-2 py-2 text-center">ECode</th>
             <th id="ename" class=" bg-[#fd9b00] text-white px-2 py-2 text-center">EName</th>
@@ -90,7 +92,7 @@ h-screen flex items-center flex-col justify-center font-[Rubik] ">
         </thead>
         <tbody>  
 <!-- second  -->
-          <tr class="bg-[#462f2f1c]  text-center ">
+          <tr class="bg-[#462f2f1c] text-center ">
             <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white px-2 py-2  ">15</td>
 
             <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white px-2 py-2 ">Haseeb</td>
@@ -105,9 +107,9 @@ h-screen flex items-center flex-col justify-center font-[Rubik] ">
 
                <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full " name="eye-outline"></ion-icon>
 
-              <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full "name="trash-outline"  ></ion-icon>
+              <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-red-600 border p-[2px] border-red-600 rounded-full "name="trash-outline"  ></ion-icon>
 
-          <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full"  name="pencil-outline"></ion-icon>  
+          <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-blue-600 border p-[2px] border-blue-600 rounded-full"  name="pencil-outline"></ion-icon>  
 
           </td>
         </tr>
@@ -127,9 +129,9 @@ h-screen flex items-center flex-col justify-center font-[Rubik] ">
             <td class="flex text-center px-2 justify-center py-2  gap-3" >
                <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full "   name="eye-outline" ></ion-icon>
 
-              <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full " name="trash-outline"></ion-icon>
+              <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-red-600 border p-[2px] border-red-600 rounded-full "name="trash-outline"  ></ion-icon>
 
-              <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full" name="pencil-outline"></ion-icon>  
+                     <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-blue-600 border p-[2px] border-blue-600 rounded-full"  name="pencil-outline"></ion-icon> 
 
           </td>
           </tr>
@@ -149,9 +151,9 @@ h-screen flex items-center flex-col justify-center font-[Rubik] ">
 
               <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full "   name="eye-outline"></ion-icon>
 
-              <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full " name="trash-outline"></ion-icon>
+              <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-red-600 border p-[2px] border-red-600 rounded-full "name="trash-outline"  ></ion-icon>
 
-              <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full" name="pencil-outline"></ion-icon>   
+                     <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-blue-600 border p-[2px] border-blue-600 rounded-full"  name="pencil-outline"></ion-icon>  
 
           </td>
           </tr>
@@ -169,9 +171,9 @@ h-screen flex items-center flex-col justify-center font-[Rubik] ">
 
       <td  class="flex text-center  justify-center py-2 px-2 gap-3" > <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full"  name="eye-outline"></ion-icon>
 
-        <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full " name="trash-outline"></ion-icon>
+        <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-red-600 border p-[2px] border-red-600 rounded-full "name="trash-outline"  ></ion-icon>
 
-        <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full" name="pencil-outline"></ion-icon> 
+               <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-blue-600 border p-[2px] border-blue-600 rounded-full"  name="pencil-outline"></ion-icon>
 
     </td>
   </tr>
@@ -189,9 +191,9 @@ h-screen flex items-center flex-col justify-center font-[Rubik] ">
 
     <td class="flex text-center  justify-center px-2 py-2 gap-3" > <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full "  name="eye-outline"></ion-icon>
 
-      <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full " name="trash-outline"></ion-icon>
+      <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-red-600 border p-[2px] border-red-600 rounded-full "name="trash-outline"  ></ion-icon>
 
-      <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full" name="pencil-outline"></ion-icon> 
+             <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-blue-600 border p-[2px] border-blue-600 rounded-full"  name="pencil-outline"></ion-icon>
 
   </td>
   </tr>
@@ -211,9 +213,9 @@ h-screen flex items-center flex-col justify-center font-[Rubik] ">
       
       <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full"  name="eye-outline"></ion-icon>
 
-      <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full " name="trash-outline"></ion-icon>
+      <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-red-600 border p-[2px] border-red-600 rounded-full "name="trash-outline"  ></ion-icon>
 
-      <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full" name="pencil-outline"></ion-icon>  
+             <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-blue-600 border p-[2px] border-blue-600 rounded-full"  name="pencil-outline"></ion-icon> 
 
   </td>
   </tr>
@@ -233,16 +235,16 @@ h-screen flex items-center flex-col justify-center font-[Rubik] ">
       
       <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full " name="eye-outline"></ion-icon>
 
-      <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full " name="trash-outline"></ion-icon>
+      <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-red-600 border p-[2px] border-red-600 rounded-full "name="trash-outline"  ></ion-icon>
 
-      <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full" name="pencil-outline"></ion-icon> 
+             <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-blue-600 border p-[2px] border-blue-600 rounded-full"  name="pencil-outline"></ion-icon>
 
   </td>
   </tr>
   
 </tbody>
 </table>
-
+</div>
     <script src="script.js"></script>
 </body>
 </html>
