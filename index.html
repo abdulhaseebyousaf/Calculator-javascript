@@ -12,20 +12,22 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 </style>
-<body class=" bg-gradient-to-b px-11 from-[#031020] to-[#2c3a57]
-h-screen flex items-center justify-center font-[Rubik] ">
+<body class=" bg-gradient-to-b max-sm:overflow-x-scroll from-[#031020] to-[#2c3a57]
+h-screen flex items-center flex-col justify-center font-[Rubik] ">
 <!--  -->
-<div id="modal" class="w-screen bg-[rgba(0,0,0,0.2)] backdrop-blur-sm h-screen fixed pl-4 translate-y-[10%] hidden  justify-center z-50 ">
-<div class="w-[40%]  h-min translate-y-[-4%]  bg-slate-700 rounded-lg flex flex-col gap-3 p-4 text-white"> 
+<h1 class="text-4xl  tracking-wide bg-gradient-to-r from-[#fefefe] via-[#ea3c43] to-[#07b8c7] inline-block text-transparent bg-clip-text mb-9 font-semibold max-sm:text-2xl max-sm:mb-6 " >Employee Table</h1>
+<!--  -->
+<div id="modal" class="w-screen max-sm:overflow-x-scroll  items-center bg-[rgba(0,0,0,0.2)] backdrop-blur-sm h-screen fixed px-2  hidden  justify-center z-50  ">
+  <div class="w-[40%]  h-min max-lg:w-8/12 max-sm:w-5/6  bg-slate-700 rounded-lg flex flex-col gap-3 p-4 text-white"> 
     <!--  -->
-  <label for="email">ECode:</label>
-  <div  class="td p-2 bg-transparent bg-white border-2 border-white rounded text-sky-800">
-  15
+    <label for="email">ECode:</label>
+    <div  class="td p-2 bg-transparent bg-white border-2 border-white rounded text-sky-800">
+      15
     </div>
-  <label for="name">EName:</label>
-  <div  class="td p-2 bg-white  border-white rounded text-sky-800">
+    <label for="name">EName:</label>
+    <div  class="td p-2 bg-white  border-white rounded text-sky-800">
   Haseeb
-    </div>
+</div>
   <label for="salary">Salary:</label>
   <div  class="td p-2 bg-white border-white rounded text-sky-800">
     95000 
@@ -34,67 +36,70 @@ h-screen flex items-center justify-center font-[Rubik] ">
   <div  class="td p-2 rbg-white  border-white rounded text-sky-800 bg-white">
     20
     </div>
-  <label for="joinDate">JoinDate</label>
-  <div  class="td p-2 bg-white  border-white rounded text-sky-800">
-    2024-8-7
+    <label for="joinDate">JoinDate</label>
+    <div  class="td p-2 bg-white  border-white rounded text-sky-800">
+      2024-8-7
     </div>
+    <button class="py-2">
+      <h1 class="px-6 max-sm:px-5 m-auto transition-all duration-500 cursor-pointer hover:bg-black hover:text-white py-2 w-min rounded-full bg-gray-500" o >Done</h1>
+    </button>
+</div>
+</div>
+
+<!--  -->
+<div id="modall" class="w-screen  items-center bg-[rgba(0,0,0,0.2)] backdrop-blur-sm h-screen fixed px-2   hidden  justify-center z-50 ">
+  <div class="w-[40%]  h-min max-lg:w-8/12 max-sm:w-5/6 bg-slate-700 rounded-lg flex flex-col gap-3 p-4 text-white"> 
+      <!--  -->
+    <label id="ecode" for="email">ECode:</label>
+    <input placeholder="" type="number" class="p-2 bg-transparent bg-white border-2 border-white rounded text-sky-800">
+  </input>
+    <label id="ename" for="name">EName:</label>
+    <input placeholder=""  type="text"  class="p-2 bg-white  border-white rounded text-sky-800">
+</input>
+    <label id="salary" for="salary">Salary:</label>
+    <input placeholder="" type="number" class="p-2 bg-white border-white rounded text-sky-800">
+</input>
+    <label id="age" for="age">Age</label>
+    <input placeholder="" type="number" class="p-2 rbg-white  border-white rounded text-sky-800 bg-white">
+</input>
+    <label id="joinData" for="joinDate">JoinDate</label>
+    <input placeholder="" type="datetime" class="p-2 bg-white  border-white rounded text-sky-800">
+</input>
+<div id="doneButton" class="flex justify-center gap-x-5 mt-1" >
   <button class="py-2">
-<h1 class="px-6 m-auto transition-all duration-500 cursor-pointer hover:bg-black hover:text-white py-2 w-min rounded-full bg-gray-500" o >Done</h1>
+<h1  class="button max-sm:px-5 max-sm:py-[5px]  px-6 m-auto transition-all duration-500 cursor-pointer hover:bg-black hover:text-white py-2 w-min rounded-full bg-gray-500" onclick="Cancel()" >Cancel</h1>
+  </button>
+  <button class="py-2">
+    <h1 class="px-6 m-auto max-sm:px-6 max-sm:py-[5px] transition-all duration-500 cursor-pointer hover:bg-black hover:text-white py-2 w-min rounded-full bg-gray-500">Done</h1>
   </button>
 </div>
-</div>
-<!--  -->
-<div id="modall" class="w-screen bg-[rgba(0,0,0,0.2)] backdrop-blur-sm h-screen fixed pl-4 translate-y-[-70%] translate-x-[-59%] hidden  justify-center z-50 ">
-  <div class="w-[40%]  h-min translate-y-[49%]  bg-slate-700 rounded-lg flex flex-col gap-3 p-4 text-white"> 
-      <!--  -->
-    <label for="email">ECode:</label>
-    <input placeholder="15" class="td p-2 bg-transparent bg-white border-2 border-white rounded text-sky-800">
-    
-  </input>
-    <label for="name">EName:</label>
-    <input placeholder="Haseeb"  class="td p-2 bg-white  border-white rounded text-sky-800">
- 
-</input>
-    <label for="salary">Salary:</label>
-    <input placeholder="95000"  class="td p-2 bg-white border-white rounded text-sky-800">
-       
-</input>
-    <label for="age">Age</label>
-    <input  placeholder="20" class="td p-2 rbg-white  border-white rounded text-sky-800 bg-white">
-</input>
-    <label for="joinDate">JoinDate</label>
-    <input placeholder="2024-8-7"  class="td p-2 bg-white  border-white rounded text-sky-800">
-</input>
-    <button class="py-2">
-  <h1 class="px-6 m-auto transition-all duration-500 cursor-pointer hover:bg-black hover:text-white py-2 w-min rounded-full bg-gray-500" o >Done</h1>
-    </button>
   </div>
   </div>
   <!--  -->
-    <table class="table h-max w-2/3 table-auto cursor-pointer rounded-2xl bg-inherit opacity-80 bg-slate-500   ">
+    <table class="table max-lg:w-11/12 h-max w-9/12 table-auto cursor-pointer rounded-2xl bg-inherit opacity-80 bg-slate-500 max-sm:w-700px max-sm:translate-x-2 max-sm:flex-nowrap">
         <thead>
-            <!-- first rowr Ecode -->
+            <!-- first row  -->
           <tr>
-            <th id="ecode" class=" bg-[#fefefe]  text-black px-4 py-2 text-center">ECode</th>
-            <th id="ename" class=" bg-[#fd9b00] text-white px-4 py-2 text-center">EName</th>
-            <th  id="salary" class=" bg-[#ea3c43] px-4 text-white py-2 text-center">Salary</th>
-            <th  id="age" class=" bg-[#07b8c7] px-4 py-2 text-white text-center">Age</th>
-            <th  id="joinDate" class=" bg-[#535b64] px-4 py-2 text-white text-center">JoinDate</th>
-            <th class=" bg-[#36304a]  px-4 py-2 text-white text-center">Action</th>
+            <th id="ecode" class=" bg-[#fefefe]  text-black px-2 py-2 text-center">ECode</th>
+            <th id="ename" class=" bg-[#fd9b00] text-white px-2 py-2 text-center">EName</th>
+            <th  id="salary" class=" bg-[#ea3c43] px-2 text-white py-2 text-center">Salary</th>
+            <th  id="age" class=" bg-[#07b8c7] px-2 py-2 text-white text-center">Age</th>
+            <th  id="joinDate" class=" bg-[#535b64] px-2 py-2 text-white text-center">JoinDate</th>
+            <th class=" bg-[#36304a]  px-2 py-2 text-white text-center">Action</th>
           </tr>
         </thead>
         <tbody>  
 <!-- second  -->
-          <tr class="bg-[#462f2f1c] h-10 text-center ">
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white px-4 py-2 w-[15%] ">15</td>
+          <tr class="bg-[#462f2f1c]  text-center ">
+            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white px-2 py-2  ">15</td>
 
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white px-4 py-2 ">Haseeb</td>
+            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white px-2 py-2 ">Haseeb</td>
 
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e] px-4 py-2 text-white">95000</td>
+            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e] px-2 py-2 text-white">95000</td>
 
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4 text-white py-2">20</td>
+            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 text-white py-2">20</td>
 
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4 text-white py-2">2024-8-7</td>
+            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 text-white py-2">10-18-2024</td>
 
             <td class="flex text-center px-2  justify-center py-2  gap-3" >
 
@@ -108,16 +113,16 @@ h-screen flex items-center justify-center font-[Rubik] ">
         </tr>
              
           <!-- third -->
-          <tr   class=" h-10 text-center">
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4 py-2  text-white w-[15%]">25</td>
+          <tr   class=" h text-center">
+            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 py-2  text-white w-[15%]">25</td>
 
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4 text-white py-2">Sameer</td>
+            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 text-white py-2">Sameer</td>
 
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e] px-4 text-white py-2">20000</td>
+            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e] px-2 text-white py-2">20000</td>
 
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4 text-white py-2">28</td>
+            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 text-white py-2">28</td>
 
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4 text-white py-2">2022-7-14</td>
+            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 text-white py-2">7-14-2022</td>
 
             <td class="flex text-center px-2 justify-center py-2  gap-3" >
                <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full "   name="eye-outline" ></ion-icon>
@@ -129,16 +134,16 @@ h-screen flex items-center justify-center font-[Rubik] ">
           </td>
           </tr>
           <!-- forth row -->
-          <tr class="text-center h-10 bg-[#462f2f1c] ">
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 border-slate-500 px-4 py-2 text-white w-[15%]">26</td>
+          <tr class="text-center h bg-[#462f2f1c] ">
+            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 border-slate-500 px-2 py-2 text-white w-[15%]">26</td>
 
             <td class="hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">Abdullah</td>
 
-            <td class="hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e] text-white px-4 py-2">25000</td>
+            <td class="hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e] text-white px-2 py-2">25000</td>
 
             <td class="hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">32</td>
 
-            <td class="hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">2012-8-17</td>
+            <td class="hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">8-17-2020</td>
 
             <td class="flex text-center px-2 justify-center py-2 gap-3" > 
 
@@ -151,16 +156,16 @@ h-screen flex items-center justify-center font-[Rubik] ">
           </td>
           </tr>
 <!-- fifth row -->
-<tr class=" text-center h-10 ">
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white px-4 py-2 w-[15%]">27</td>
+<tr class=" text-center h ">
+    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white px-2 py-2 w-[15%]">27</td>
    
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4 text-white py-2">Usman</td>
+    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 text-white py-2">Usman</td>
 
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e] px px-4 text-white py-2">15000</td>
+    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e] px px-2 text-white py-2">15000</td>
 
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4 text-white py-2">55</td>
+    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 text-white py-2">55</td>
 
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4 text-white py-2">2012-8-19</td>
+    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 text-white py-2">8-19-2012</td>
 
       <td  class="flex text-center  justify-center py-2 px-2 gap-3" > <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full"  name="eye-outline"></ion-icon>
 
@@ -171,16 +176,16 @@ h-screen flex items-center justify-center font-[Rubik] ">
     </td>
   </tr>
   <!-- sixth row -->
-  <tr class=" text-center h-10 bg-[#462f2f1c]">
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4 text-white py-2">28</td>
+  <tr class=" text-center h bg-[#462f2f1c]">
+    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 text-white py-2">28</td>
 
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4 text-white py-2">Momin</td>
+    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 text-white py-2">Momin</td>
 
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e] px px-4 text-white py-2">55000</td>
+    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e] px px-2 text-white py-2">55000</td>
 
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4  text-white py-2">60</td>
+    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2  text-white py-2">60</td>
 
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4 text-white py-2">2011-2-15</td>
+    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 text-white py-2">11-12-2010</td>
 
     <td class="flex text-center  justify-center px-2 py-2 gap-3" > <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full "  name="eye-outline"></ion-icon>
 
@@ -191,18 +196,18 @@ h-screen flex items-center justify-center font-[Rubik] ">
   </td>
   </tr>
   <!-- seventh -->
-  <tr class="text-center h-10 ">
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4 text-white py-2">29</td>
+  <tr class="text-center h ">
+    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 text-white py-2">29</td>
 
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4 text-white py-2">Humara</td>
+    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 text-white py-2">Humara</td>
 
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e]  px-4 text-white py-2">35000</td>
+    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e]  px-2 text-white py-2">35000</td>
 
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4 text-white py-2">26</td>
+    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 text-white py-2">26</td>
 
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4 text-white py-2">2012-8-9</td>
+    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 text-white py-2">12-8-2018</td>
 
-    <td class="flex text-center  justify-center py-2 px-2 gap-3" > 
+    <td class="flex text-center  justify-center py-2 px-3 gap-3" > 
       
       <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full"  name="eye-outline"></ion-icon>
 
@@ -213,16 +218,16 @@ h-screen flex items-center justify-center font-[Rubik] ">
   </td>
   </tr>
   <!-- eigth -->
-  <tr class=" text-center h-10 bg-[#462f2f1c]">
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4 text-white hover:rounded-bl-md py-2">30</td>
+  <tr class=" text-center h bg-[#462f2f1c]">
+    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 text-white hover:rounded-bl-md py-2">30</td>
 
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4 text-white py-2">Rabia</td>
+    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 text-white py-2">Rabia</td>
 
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e]  px-4 text-white py-2">39000</td>
+    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e]  px-2 text-white py-2">39000</td>
 
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4 text-white py-2">21</td>
+    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 text-white py-2">21</td>
 
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-4 text-white py-2">2022-7-21</td>
+    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 text-white py-2">2-7-2021</td>
 
     <td class="flex text-center  justify-center py-2 px-2  gap-3" > 
       
