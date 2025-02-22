@@ -52,10 +52,9 @@ const rowData = row.querySelectorAll("td");
     inputs[3].value = rowData[3].textContent.trim();
     inputs[4].value = rowData[4].textContent.trim();
 
-    // Show the modal
     modal.style.display = "flex";
 
-    // Add click event listener to the done button
+  
     document.getElementById("doneButton").addEventListener("click", function () {
         rowData[0].textContent = inputs[0].value;
         rowData[1].textContent = inputs[1].value;
