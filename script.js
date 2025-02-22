@@ -42,19 +42,30 @@ function deleteRow(row) {
 }
 
 function editRow(row) {
-const modal = document.getElementById("modall");
-const inputs = modal.querySelectorAll("input");
-const rowData = row.querySelectorAll("td");
+    const modal = document.getElementById("modall");
+    const inputs = modal.querySelectorAll("input");
+    const rowData = row.querySelectorAll("td");
 
-    inputs[0].value = rowData[0].textContent.trim();
-    inputs[1].value = rowData[1].textContent.trim();
-    inputs[2].value = rowData[2].textContent.trim();
-    inputs[3].value = rowData[3].textContent.trim();
-    inputs[4].value = rowData[4].textContent.trim();
+    inputs[0].value = rowData[0].textContent.trim(); 
+    inputs[1].value = rowData[1].textContent.trim(); 
+    inputs[2].value = rowData[2].textContent.trim(); 
+    inputs[3].value = rowData[3].textContent.trim(); 
+    inputs[4].value = rowData[4].textContent.trim(); 
 
     modal.style.display = "flex";
 
-  
+   
+    inputs[1].addEventListener("input", function () {
+        this.value = this.value.replace(/[^a-zA-Z\s]/g, ""); 
+    });
+
+ 
+    inputs[4].addEventListener("keydown", function (event) {
+        if (event.key.length === 1 && !/[0-9]/.test(event.key)) {
+            event.preventDefault();
+        }
+    });
+
     document.getElementById("doneButton").addEventListener("click", function () {
         rowData[0].textContent = inputs[0].value;
         rowData[1].textContent = inputs[1].value;
@@ -63,6 +74,8 @@ const rowData = row.querySelectorAll("td");
         rowData[4].textContent = inputs[4].value;
         modal.style.display = "none";
     });
+    
+    
 }
 
 function Cancel() {
@@ -76,10 +89,14 @@ function handleOpenModal() {
     addUserModal.style.display = "flex";
 }
 
+document.getElementById("ename").addEventListener("input", function () {
+    this.value = this.value.replace(/[^a-zA-Z\s]/g, "");
+});
+
 document.getElementById("add").addEventListener("click", function () {
     const addUserModal = document.getElementById("addUser");
     addUserModal.style.display = "none";
-
+    
     let ecode = document.getElementById("ecode").value.trim();
     let ename = document.getElementById("ename").value.trim();
     let salary = document.getElementById("salary").value.trim();

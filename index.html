@@ -41,7 +41,7 @@ min-h-screen w-screen flex items-center flex-col justify-center font-[Rubik] ">
     <input id="age"  placeholder="Enter age" type="number" class="p-2 rbg-white  border-white rounded text-sky-800 bg-white">
 </input>
     <label  for="joinDate">JoinDate</label>
-    <input id="joinDate" placeholder="Enter JoinDate"  type="datetime" class="p-2 bg-white  border-white rounded text-sky-800">
+    <input id="joinDate" placeholder="Enter JoinDate"  type="date" class="p-2 bg-white  border-white rounded text-sky-800">
 </input>
 <div class="flex justify-center gap-x-5 mt-1" >
   <button class="py-2">
@@ -83,15 +83,16 @@ min-h-screen w-screen flex items-center flex-col justify-center font-[Rubik] ">
 </div>
 </div>
 
-<!-- for delete -->
+<!-- for edit-->
 <div id="modall" class="w-screen  items-center bg-[rgba(0,0,0,0.2)] backdrop-blur-sm h-screen fixed px-2   hidden  justify-center z-50 ">
+
   <div class="w-[40%]  h-min max-lg:w-8/12 max-sm:w-5/6 bg-slate-700 rounded-lg flex flex-col gap-3 p-4 text-white"> 
       <!--  -->
-    <label id="ecode" for="email">ECode:</label>
+    <label id="ecode" for="number">ECode:</label>
     <input placeholder="" type="number" class="p-2 bg-transparent bg-white border-2 border-white rounded text-sky-800">
   </input>
     <label id="ename" for="name">EName:</label>
-    <input placeholder=""  type="text"  class="p-2 bg-white  border-white rounded text-sky-800">
+    <input id="ename" placeholder=""  type="text"  class="p-2 bg-white  border-white rounded text-sky-800">
 </input>
     <label id="salary" for="salary">Salary:</label>
     <input placeholder="" type="number" class="p-2 bg-white border-white rounded text-sky-800">
@@ -99,8 +100,8 @@ min-h-screen w-screen flex items-center flex-col justify-center font-[Rubik] ">
     <label id="age" for="age">Age</label>
     <input placeholder="" type="number" class="p-2 rbg-white  border-white rounded text-sky-800 bg-white">
 </input>
-    <label id="joinData" for="joinDate">JoinDate</label>
-    <input placeholder="" type="datetime" class="p-2 bg-white  border-white rounded text-sky-800">
+    <label for="joinDate">JoinDate</label>
+    <input id="joinData"  placeholder="" type="datetime" class="p-2 bg-white  border-white rounded text-sky-800">
 </input>
 <div id="doneButton" class="flex justify-center gap-x-5 mt-1" >
   <button class="py-2">
