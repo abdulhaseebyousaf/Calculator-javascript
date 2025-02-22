@@ -46,42 +46,59 @@ function editRow(row) {
     const inputs = modal.querySelectorAll("input");
     const rowData = row.querySelectorAll("td");
 
-    inputs[0].value = rowData[0].textContent.trim(); 
-    inputs[1].value = rowData[1].textContent.trim(); 
-    inputs[2].value = rowData[2].textContent.trim(); 
-    inputs[3].value = rowData[3].textContent.trim(); 
-    inputs[4].value = rowData[4].textContent.trim(); 
 
+    inputs[0].value = rowData[0].textContent.trim();
+    inputs[1].value = rowData[1].textContent.trim();
+    inputs[2].value = rowData[2].textContent.trim();
+    inputs[3].value = rowData[3].textContent.trim();
+    inputs[4].value = rowData[4].textContent.trim();
+
+  
     modal.style.display = "flex";
 
    
     inputs[1].addEventListener("input", function () {
-        this.value = this.value.replace(/[^a-zA-Z\s]/g, ""); 
+        this.value = this.value.replace(/[^a-zA-Z\s]/g, "");
     });
 
- 
+   
     inputs[4].addEventListener("keydown", function (event) {
         if (event.key.length === 1 && !/[0-9]/.test(event.key)) {
             event.preventDefault();
         }
     });
 
-    document.getElementById("doneButton").addEventListener("click", function () {
+    const doneButton = document.getElementById("doneButton");
+    const cancelButton = document.getElementById("Cancel");
+
+    
+    const doneHandler = function () {
         rowData[0].textContent = inputs[0].value;
         rowData[1].textContent = inputs[1].value;
         rowData[2].textContent = inputs[2].value;
         rowData[3].textContent = inputs[3].value;
         rowData[4].textContent = inputs[4].value;
         modal.style.display = "none";
-    });
-    
-    
+        doneButton.removeEventListener("click", doneHandler);
+        cancelButton.removeEventListener("click", cancelHandler);
+    };
+
+
+    const cancelHandler = function () {
+        modal.style.display = "none";
+        doneButton.removeEventListener("click", doneHandler);
+        cancelButton.removeEventListener("click", cancelHandler);
+    };
+
+   
+    doneButton.addEventListener("click", doneHandler);
+    cancelButton.addEventListener("click", cancelHandler);
 }
 
 function Cancel() {
-    document.getElementById("addUser").style.display = "none";
     const modal = document.getElementById("modall");
     modal.style.display = "none";
+    document.getElementById("addUser").style.display = "none";
 }
 
 function handleOpenModal() {
