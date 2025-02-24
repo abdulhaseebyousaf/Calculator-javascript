@@ -3,288 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>employee Table</title>
+    <title>calculator</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
 </head>
-<style>
 
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-</style>
-<body class=" overflow-y-hidden  bg-gradient-to-b gap-y-6 from-[#031020] to-[#2c3a57]
-min-h-screen w-screen flex items-center flex-col justify-center font-[Rubik] ">
-<!--  -->
-<h1 class="heading text-4xl  tracking-wide bg-gradient-to-r from-[#fefefe] via-[#ea3c43] to-[#07b8c7] inline-block text-transparent bg-clip-text font-semibold  " >Employee Table</h1>
-
-<button id="addd" class="addButton text-[12px] max-sm:text-[10px] m-5 px-3 py-1   text-white overflow-hidden relative transform rounded-md  cursor-pointer" onclick="handleOpenModal()" >
-  <span>Add User</span>
-  <div class="liquid"></div>
-</button>
-<!-- for add user -->
-<div id="addUser" class="w-screen transition-all duration-100 max-sm:m-4 z-50 items-center bg-[rgba(0,0,0,0.2)] backdrop-blur-sm h-screen fixed  px-2  hidden justify-center ">
-
-  <div class=" w-[40%]  h-min max-lg:w-8/12 max-sm:w-5/6 bg-slate-700 rounded-lg flex flex-col gap-3 p-4 text-white"> 
-      <!--  -->
-    <label  for="email">ECode:</label>
-    <input id="ecode"  placeholder="Enter Ecode" type="number" class="p-2 bg-transparent bg-white border-2 border-white rounded text-sky-800">
-  </input>
-    <label  for="name">EName:</label>
-    <input id="ename" placeholder="Enter Ename" type="text"  class="p-2 bg-white  border-white rounded text-sky-800">
-</input>
-    <label for="salary">Salary:</label>
-    <input id="salary"   placeholder="Enter  salary" type="number" class="p-2 bg-white border-white rounded text-sky-800">
-</input>
-    <label  for="age">Age</label>
-    <input id="age"  placeholder="Enter age" type="number" class="p-2 rbg-white  border-white rounded text-sky-800 bg-white">
-</input>
-    <label  for="joinDate">JoinDate</label>
-    <input id="joinDate" placeholder="Enter JoinDate"  type="date" class="p-2 bg-white  border-white rounded text-sky-800">
-</input>
-<div class="flex justify-center gap-x-5 mt-1" >
-  <button class="py-2">
-<h1  class="button max-sm:px-5 max-sm:py-[5px]  px-6 m-auto transition-all duration-500 cursor-pointer hover:bg-black hover:text-white py-2 w-min rounded-full bg-gray-500" onclick="Cancel()" >Cancel</h1>
-  </button>
-  <button  class="py-2">
-  <h1 id="add" class=" px-6 m-auto max-sm:px-6 max-sm:py-[5px] transition-all duration-500 cursor-pointer hover:bg-black hover:text-white py-2 w-min rounded-full bg-gray-500">Done</h1>
-  </button>
-</div>
-  </div>
-  </div>
-<!-- for only view -->
-<div id="modal" class="w-screen  items-center bg-[rgba(0,0,0,0.2)] backdrop-blur-sm h-screen fixed px-2  hidden  justify-center z-50  ">
-  <div class="inner w-[40%]  h-min max-lg:w-8/12 max-sm:w-5/6  bg-slate-700 rounded-lg flex flex-col gap-3 p-4 text-white"> 
-    <!--  -->
-    <label for="email">ECode:</label>
-    <div  class="td p-2 bg-transparent bg-white border-2 border-white rounded text-sky-800">
-      15
+<body class="min-h-screen font-[Rubik] px-4 text-teal-700 bg-stone-800 flex items-center justify-center">
+       <div class="bg-black opacity-90 p-3 rounded-sm">  
+        <input class="input w-full p-3 mb-4  bg-slate-900 text-right text-2xl border border-gray-300 rounded-md" type="text" > </input>
+           <div class="grid  grid-cols-4  text-teal-700  gap-2"> 
+        
+            <button class="button active:scale-[0.98] p-3 bg-red-500 cursor-pointer text-white rounded-md">C</button>   
+            <button class="button active:scale-[0.98] p-3 bg-red-500 text-white cursor-pointer rounded-md">DEL</button>       
+               <button class="button p-3 active:scale-[0.98] bg-orange-500 text-white cursor-pointer rounded-md">%</button> 
+                 
+               <button class="button  p-3 active:scale-[0.98] bg-orange-500 text-white cursor-pointer rounded-md">/</button>      
+               
+               <button class="button active:scale-[0.98] p-3 bg-gray-300 cursor-pointer rounded-md">7</button>
+               <button class="button active:scale-[0.98] p-3 bg-gray-300 cursor-pointer rounded-md">8</button>
+               <button class="button active:scale-[0.98] p-3 bg-gray-300 cursor-pointer rounded-md">9</button>
+               <button class="button active:scale-[0.98] p-3 bg-orange-500 cursor-pointer text-white rounded-md">*</button>
+            <button class="button active:scale-[0.98] p-3 bg-gray-300 cursor-pointer rounded-md">4</button>
+            <button class="button active:scale-[0.98] p-3 bg-gray-300 cursor-pointer rounded-md">5</button>
+            <button class="button active:scale-[0.98] p-3 bg-gray-300 cursor-pointer rounded-md">6</button>
+            <button class="button active:scale-[0.98] p-3 bg-orange-500 cursor-pointer text-white rounded-md">-</button>
+            <button class="button active:scale-[0.98] p-3 bg-gray-300 cursor-pointer rounded-md">1</button>
+            <button class="button active:scale-[0.98] p-3 bg-gray-300 cursor-pointer rounded-md">2</button>
+            <button class="button active:scale-[0.98] p-3 bg-gray-300 cursor-pointer rounded-md">3</button>
+            <button class="button active:scale-[0.98] p-3 bg-orange-500 cursor-pointer text-white rounded-md">+</button>
+            
+            <button class="button active:scale-[0.98] p-3 bg-gray-300 rounded-md cursor-pointer col-span-2">0</button>
+            <button class="button p-3 active:scale-[0.98] bg-gray-300 cursor-pointer rounded-md">.</button>
+            <button class="button p-3 active:scale-[0.98] bg-orange-500 cursor-pointer text-white rounded-md ">=</button>
+        </div>
     </div>
-    <label for="name">EName:</label>
-    <div  class="td p-2 bg-white  border-white rounded text-sky-800">
-  Haseeb
 </div>
-  <label for="salary">Salary:</label>
-  <div  class="td p-2 bg-white border-white rounded text-sky-800">
-    95000 
-  </div>
-  <label for="age">Age</label>
-  <div  class="td p-2 rbg-white  border-white rounded text-sky-800 bg-white">
-    20
-    </div>
-    <label for="joinDate">JoinDate</label>
-    <div  class="td p-2 bg-white  border-white rounded text-sky-800">
-      2024-8-7
-    </div>
-    <button class="py-2">
-      <h1 class="px-6 max-sm:px-5 m-auto transition-all duration-500 cursor-pointer hover:bg-black hover:text-white py-2 w-min rounded-full bg-gray-500"  >Done</h1>
-    </button>
-</div>
-</div>
-
-<!-- for edit-->
-<div id="modall" class="w-screen  items-center bg-[rgba(0,0,0,0.2)] backdrop-blur-sm h-screen fixed px-2   hidden  justify-center z-50 ">
-
-  <div class="w-[40%]  h-min max-lg:w-8/12 max-sm:w-5/6 bg-slate-700 rounded-lg flex flex-col gap-3 p-4 text-white"> 
-      <!--  -->
-    <label id="ecode" for="number">ECode:</label>
-    <input placeholder="" type="number" class="p-2 bg-transparent bg-white border-2 border-white rounded text-sky-800">
-  </input>
-    <label id="ename" for="name">EName:</label>
-    <input id="ename" placeholder=""  type="text"  class="p-2 bg-white  border-white rounded text-sky-800">
-</input>
-    <label id="salary" for="salary">Salary:</label>
-    <input placeholder="" type="number" class="p-2 bg-white border-white rounded text-sky-800">
-</input>
-    <label id="age" for="age">Age</label>
-    <input placeholder="" type="number" class="p-2 rbg-white  border-white rounded text-sky-800 bg-white">
-</input>
-    <label for="joinDate">JoinDate</label>
-    <input id="joinData"  placeholder="" type="datetime" class="p-2 bg-white  border-white rounded text-sky-800">
-</input>
-<div id="doneButton" class="flex justify-center gap-x-5 mt-1" >
-  <button class="py-2">
-<h1 id="Cancel" class="button max-sm:px-5 max-sm:py-[5px]  px-6 m-auto transition-all duration-500 cursor-pointer hover:bg-black hover:text-white py-2 w-min rounded-full bg-gray-500" onclick="Cancel()" >Cancel</h1>
-  </button>
-  <button class="py-2">
-    <h1 class="px-6 m-auto max-sm:px-6 max-sm:py-[5px] transition-all duration-500 cursor-pointer hover:bg-black hover:text-white py-2 w-min rounded-full bg-gray-500">Done</h1>
-  </button>
-</div>
-  </div>
-  </div>
-
-  <!--main div-->
-  <div class="max-[495px]:w-[95%] max-[495px]:overflow-x-scroll w-full h-max">
-<!-- tabel -->
-  <table id="tabel" class="rounded-2xl table table-auto cursor-pointer w-9/12 m-auto max-lg:w-11/12  bg-inherit opacity-80 bg-slate-500 pl-9 ">
-    <!-- first row  -->
-        <thead>
-          <tr>
-            <th id="ecode" class=" bg-[#fefefe]  text-black px-2 py-2 text-center">ECode</th>
-            <th id="ename" class=" bg-[#fd9b00] text-white px-2 py-2 text-center">EName</th>
-            <th  id="salary" class=" bg-[#ea3c43] px-2 text-white py-2 text-center">Salary</th>
-            <th  id="age" class=" bg-[#07b8c7] px-2 py-2 text-white text-center">Age</th>
-            <th  id="joinDate" class=" bg-[#535b64] px-2 py-2 text-white text-center">JoinDate</th>
-            <th class=" bg-[#36304a]  px-2 py-2 text-white text-center">Action</th>
-          </tr>
-        </thead>
-        <tbody>  
-<!-- second  -->
-          <tr class="bg-[#462f2f1c] text-center ">
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white px-2 py-2">15</td>
-
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white px-2 py-2">Haseeb</td>
-
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e] px-2 py-2 text-white">95000</td>
-
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">20</td>
-
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">10-18-2024</td>
-
-            <td class="flex text-center px-2  justify-center py-2  gap-3" >
-
-               <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full " name="eye-outline"></ion-icon>
-
-              <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-red-500 border p-[2px] border-red-500 rounded-full "name="trash-outline"  ></ion-icon>
-
-          <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-blue-600 border p-[2px] border-blue-600 rounded-full"  name="pencil-outline"></ion-icon>  
-
-          </td>
-        </tr>
-             
-          <!-- third -->
-          <tr   class=" h text-center">
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 py-2  text-white w-[15%]">25</td>
-
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">Sameer</td>
-
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e] px-2 text-white py-2">20000</td>
-
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">28</td>
-
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">7-14-2022</td>
-
-            <td class="flex text-center px-2 justify-center py-2  gap-3" >
-           
-              <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full"  name="eye-outline" ></ion-icon>
-
-              <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-red-500 border p-[2px] border-red-500 rounded-full"  name="trash-outline"  ></ion-icon>
-
-           <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-blue-600 border p-[2px] border-blue-600 rounded-full"  name="pencil-outline"></ion-icon> 
-
-          </td>
-          </tr>
-
-          <!-- forth row -->
-          <tr class="text-center h bg-[#462f2f1c] ">
-            <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 border-slate-500 px-2 py-2 text-white w-[15%]">26</td>
-
-            <td class="hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">Abdullah</td>
-
-            <td class="hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e] text-white px-2 py-2">25000</td>
-
-            <td class="hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">32</td>
-
-            <td class="hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">8-17-2020</td>
-
-            <td class="flex text-center px-2 justify-center py-2 gap-3" > 
-
-              <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full "   name="eye-outline"></ion-icon>
-
-              <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-red-500 border p-[2px] border-red-500 rounded-full "name="trash-outline"  ></ion-icon>
-
-           <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-blue-600 border p-[2px] border-blue-600 rounded-full"  name="pencil-outline"></ion-icon>  
-
-          </td>
-          </tr>
-<!-- fifth row -->
-<tr class=" text-center h ">
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white px-2 py-2 w-[15%]">27</td>
-   
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">Usman</td>
-
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e] px px-2 text-white py-2">15000</td>
-
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">55</td>
-
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">8-19-2012</td>
-
-      <td  class="flex text-center  justify-center py-2 px-2 gap-3" > <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full"  name="eye-outline"></ion-icon>
-
-        <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-red-500 border p-[2px] border-red-500 rounded-full "name="trash-outline"  ></ion-icon>
-
-            <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-blue-600 border p-[2px] border-blue-600 rounded-full"  name="pencil-outline"></ion-icon> 
-    </td>
-  </tr>
-  <!-- sixth row -->
-  <tr class=" text-center h bg-[#462f2f1c]">
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">28</td>
-
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">Momin</td>
-
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e] px px-2 text-white py-2">55000</td>
-
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2  text-white py-2">60</td>
-
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">11-12-2010</td>
-
-    <td class="flex text-center  justify-center px-2 py-2 gap-3" > <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full "  name="eye-outline"></ion-icon>
-
-      <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-red-500 border p-[2px] border-red-500 rounded-full "name="trash-outline"  ></ion-icon>
-
-          <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-blue-600 border p-[2px] border-blue-600 rounded-full"  name="pencil-outline"></ion-icon> 
-
-  </td>
-  </tr>
-  <!-- seventh -->
-  <tr class="text-center h ">
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">29</td>
-
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">Humara</td>
-
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e]  px-2 text-white py-2">35000</td>
-
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">26</td>
-
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">12-8-2018</td>
-
-    <td class="flex text-center  justify-center py-2 px-3 gap-3" > 
-      
-      <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full"  name="eye-outline"></ion-icon>
-
-      <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-red-500 border p-[2px] border-red-500 rounded-full "name="trash-outline"  ></ion-icon>
-
-          <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-blue-600 border p-[2px] border-blue-600 rounded-full"  name="pencil-outline"></ion-icon>  
-
-  </td>
-  </tr>
-  <!-- eigth -->
-  <tr class=" text-center h bg-[#462f2f1c]">
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 px-2 text-white hover:rounded-bl-md py-2">30</td>
-
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">Rabia</td>
-
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-[#bd353e]  px-2 text-white py-2">39000</td>
-
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">21</td>
-
-    <td class=" hover:bg-teal-600 transition-all duration-500 hover:text-orange-300 text-white py-2">2-7-2021</td>
-
-    <td class="flex text-center  justify-center py-2 px-2  gap-3" > 
-      
-      <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-lime-500 border p-[2px] border-lime-500 rounded-full " name="eye-outline"></ion-icon>
-
-      <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-red-500 border p-[2px] border-red-500 rounded-full "name="trash-outline"  ></ion-icon>
-
-          <ion-icon class="text-1xl hover:border-b-teal-300 hover:bg-slate-300 hover:text-black transition-all duration-300  text-blue-600 border p-[2px] border-blue-600 rounded-full"  name="pencil-outline"></ion-icon> 
-
-  </td>
-  </tr>
-  
-</tbody>
-</table>
-<script src="https://unpkg.com/scrollreveal"></script>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
