@@ -19,4 +19,7 @@ button.addEventListener('click',(e)=> {
         document.querySelector('input').value = string;
     }
 })
-}) 
+})
+function validateNumber(input) {
+    input.value = input.value.replace(/[^0-9,+,-,*,=,/]/g, ''); 
+  }
